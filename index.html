@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	  <title>Frontend Mentor | Time tracking dashboard</title>
+	  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+	  <link rel="stylesheet" href="./css/style.css">
+	  <!--script type="text/javascript" src="./js/index.js"></script-->
+	</head>
+	<body>
+		<div class="flex">
+			<div class="dashboard-container">
+				<div class="profile">
+					<div class="header">
+						<div class="content">
+							<img src="./images/image-jeremy.png" alt="Jeremy Robson" />
+							<div class="report-for">
+								<span>Report for</span>
+								<h2>Jeremy Robson</h2>
+							</div>
+						</div>
+					</div>
+					<div class="navigation">
+						<div class="content">
+							<a class="active" href="#">Daily</a>
+							<a href="#">Weekly</a>
+							<a href="#">Monthly</a>
+						</div>
+					</div>
+				</div>
+				<div class="track">
+					<div class="item bg-prop tr-work">
+						<div class="container">
+							<div class="header">
+								<label>Work</label>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+									<rect width="256" height="256" fill="none"/>
+									<circle cx="128" cy="128" r="16"/>
+									<circle cx="64" cy="128" r="16"/>
+									<circle cx="192" cy="128" r="16"/>
+								</svg> 
+							</div>
+							<div class="content">
+								<h3>32hrs</h3>
+								<p>Last week - 36hrs</p>
+							</div>
+						</div>
+					</div>
+					<div class="item bg-prop tr-play">
+						<div class="container">
+							<div class="header">
+								<label>Play</label>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+									<rect width="256" height="256" fill="none"/>
+									<circle cx="128" cy="128" r="16"/>
+									<circle cx="64" cy="128" r="16"/>
+									<circle cx="192" cy="128" r="16"/>
+								</svg>
+							</div>
+							<div class="content">
+								<h3>10hrs</h3>
+								<p>Last week - 8hrs</p>
+							</div>
+						</div>
+					</div>
+					<div class="item bg-prop tr-study">
+						<div class="container">
+							<div class="header">
+								<label>Study</label>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+									<rect width="256" height="256" fill="none"/>
+									<circle cx="128" cy="128" r="16"/>
+									<circle cx="64" cy="128" r="16"/>
+									<circle cx="192" cy="128" r="16"/>
+								</svg>
+							</div>
+							<div class="content">
+								<h3>4hrs</h3>
+								<p>Last week - 7hrs</p>
+							</div>
+						</div>
+					</div>
+					<div class="item bg-prop tr-exercise">
+						<div class="container">
+							<div class="header">
+								<label>Exercise</label>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+									<rect width="256" height="256" fill="none"/>
+									<circle cx="128" cy="128" r="16"/>
+									<circle cx="64" cy="128" r="16"/>
+									<circle cx="192" cy="128" r="16"/>
+								</svg>
+							</div>
+							<div class="content">
+								<h3>4hrs</h3>
+								<p>Last week - 5hrs</p>
+							</div>
+						</div>
+					</div>
+					<div class="item bg-prop tr-social">
+						<div class="container">
+							<div class="header">
+								<label>Social</label>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+									<rect width="256" height="256" fill="none"/>
+									<circle cx="128" cy="128" r="16"/>
+									<circle cx="64" cy="128" r="16"/>
+									<circle cx="192" cy="128" r="16"/>
+								</svg>
+							</div>
+							<div class="content">
+								<h3>5hrs</h3>
+								<p>Last week - 10hrs</p>
+							</div>
+						</div>
+					</div>
+					<div class="item bg-prop tr-selfcare">
+						<div class="container">
+							<div class="header">
+								<label>Self Care</label>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+									<rect width="256" height="256" fill="none"/>
+									<circle cx="128" cy="128" r="16"/>
+									<circle cx="64" cy="128" r="16"/>
+									<circle cx="192" cy="128" r="16"/>
+								</svg>
+							</div>
+							<div class="content">
+								<h3>2hrs</h3>
+								<p>Last week - 2hrs</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	  
+	  <div class="attribution">
+		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+		Coded by <a href="#">Jvmvl</a>.
+	  </div>
+
+	  <script type="text/javascript">
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', './data.json', true);
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState == 4 && xhr.status == 200) {
+				var json = JSON.parse(xhr.responseText);
+				console.log(json);
+			}
+		};
+		xhr.send();
+	  </script>
+	</body>
+</html>
